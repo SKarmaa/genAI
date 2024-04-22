@@ -218,14 +218,14 @@ async function build() {
                 .join(`\n`)
             : __codeContent;
 
-          /*
+          
         // overkill <--------
         const __wrappedCode = __className && __className.length
                                 ? `\n   <div className=${__className}>\n`
                                   + __mainCode.split(`\n`).map(l=>`  ${l}`).join(`\n`)
                                   + `\n   </div>\n`
                                 : __mainCode
-        */
+        
 
           const __wrappedCode = __mainCode;
           const __codeInject =
@@ -239,7 +239,7 @@ async function build() {
             __codeInject +
             ` )\n}`;
 
-          /*
+          
 
         // -------- legacy, cheerio fails to parse because of multiline attributes and react syntax, had to go manual
 
