@@ -1,5 +1,5 @@
 const fs = require(`fs`);
-
+/*
 function _replaceLastOccurrence(inputString, search, replacement) {
   const lastIndex = inputString.lastIndexOf(search);
 
@@ -16,7 +16,7 @@ function _replaceLastOccurrence(inputString, search, replacement) {
 
   return replacedString;
 }
-
+*/
 async function build() {
   console.dir({ "build/components": `react/nextui` });
   const docs_files = fs
