@@ -262,26 +262,26 @@ function App() {
 									        Share this component on{' '}
 									        <a
 									          className="font-medium text-purple-500 hover:text-purple-700 duration-200 dark:text-purple-400 dark:hover:text-purple-500"
-									          href="https://openv0.com"
+									          href="https://openai.com"
 									          target="_blank"
 									          rel="noopener noreferrer"
 									        >
-									          openv0.com
+									          openai.com
 									        </a>
 									      </div>
 
 									      {!sharedComponent ? (
 									        <div className="pt-4">
-									          Your openv0 API key -{' '}
+									          Your openai API key -{' '}
 									          <span className="text-sm">
 									            get your key from{' '}
 									            <a
 									              className="font-medium text-purple-500 hover:text-purple-700 duration-200 dark:text-purple-400 dark:hover:text-purple-500"
-									              href="https://openv0.com"
+									              href="https://openai.com"
 									              target="_blank"
 									              rel="noopener noreferrer"
 									            >
-									              openv0.com
+									              openai.com
 									            </a>
 									          </span>
 									          <br />
