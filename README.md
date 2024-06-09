@@ -3,11 +3,11 @@
 
 genAI is a generative UI component framework
 
-It allows you to AI generate and iterate on UI components, with live preview.
+It allows you to AI generate, iterate and preview on components.
 
 - **genAI** makes use of open source component libraries and icons to build a library of assets for the generative pipeline.
-- **genAI** is highly modular, and structured for elaborate generative processes
-- Component generation is a multipass pipeline - where every pass is a fully independent plugin
+- **genAI** highly modular and structured for elaborate generative processes.
+- Component generation is a multipass pipeline.
 
 ---
 
@@ -24,7 +24,7 @@ It allows you to AI generate and iterate on UI components, with live preview.
 * Icons libraries
   * Lucide
 
-The latest **genAI** update makes it easier to integrate new frameworks, libraries and plugins.
+**genAI** makes it easier to integrate new frameworks, libraries and plugins.
 
 Docs & guides on how to do so will be soon posted.
 
