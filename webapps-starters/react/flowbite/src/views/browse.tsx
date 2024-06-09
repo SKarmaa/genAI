@@ -274,7 +274,7 @@ export default function Browse() {
 		        </div>
 		      ) : (
 		        <div className="max-w-5xl py-52 mx-auto text-center text-7xl opacity-30 text-[#777] break-words font-bold">
-		          openv0
+		          genAI
 		        </div>
 		      )}
 
