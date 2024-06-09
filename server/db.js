@@ -21,7 +21,7 @@ async function db_insert(cmd) {
 
   const axios = require(`axios`);
   const sqlite3 = require("sqlite3");
-  const db = new sqlite3.Database("openv0.sqlite", (err) => {
+  const db = new sqlite3.Database("genAI.sqlite", (err) => {
     if (err) {
       console.error("Error opening database:", err.message);
     } else {
@@ -31,7 +31,7 @@ async function db_insert(cmd) {
   const { Sequelize, DataTypes } = require("sequelize");
   const sequelize = new Sequelize({
     dialect: "sqlite",
-    storage: "openv0.sqlite",
+    storage: "genAI.sqlite",
     logging: false, // quiet mode
   });
 
@@ -81,7 +81,7 @@ async function db_insert(cmd) {
   let response
   try {
     response = await axios.post(
-      `${process.env.OPENV0__API}/dev/components/download`,
+      `${process.env.genAI__API}/dev/components/download`,
       {
         user,
         name,
@@ -109,8 +109,8 @@ async function db_insert(cmd) {
         framework: responseData.framework,
         components: responseData.components,
         icons: responseData.icons,
-        query: JSON.stringify({ from: `openv0.com` }),
-        logs: JSON.stringify({ from: `openv0.com` }),
+        query: JSON.stringify({ from: `genAI.com` }),
+        logs: JSON.stringify({ from: `genAI.com` }),
 
         description: component_version.description,
         version: component_version.version,
@@ -125,7 +125,7 @@ async function db_insert(cmd) {
 
 async function db_flush() {
   try {
-    fs.unlinkSync(`./openv0.sqlite`);
+    fs.unlinkSync(`./genAI.sqlite`);
   } catch (e) {
     console.log(e);
   }

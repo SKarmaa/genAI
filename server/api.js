@@ -12,7 +12,7 @@ app.use(cors());
 app.use(express.json());
 
 const sqlite3 = require("sqlite3");
-const db = new sqlite3.Database("openv0.sqlite", (err) => {
+const db = new sqlite3.Database("genAI.sqlite", (err) => {
   if (err) {
     console.error("Error opening database:", err.message);
   } else {
@@ -22,7 +22,7 @@ const db = new sqlite3.Database("openv0.sqlite", (err) => {
 const { Sequelize, DataTypes } = require("sequelize");
 const sequelize = new Sequelize({
   dialect: "sqlite",
-  storage: "openv0.sqlite",
+  storage: "genAI.sqlite",
   logging: false, // quiet mode
 });
 
@@ -186,7 +186,7 @@ app.post("/components/iterate/description", async (req, res) => {
 app.post("/components/share", async (req, res) => {
   const query = req.body; // {key,name,framework,...}
   const response = await axios.post(
-    `${process.env.OPENV0__API}/dev/components/share`,
+    `${process.env.genAI__API}/dev/components/share`,
     {
       key: query.key,
       name: query.name,

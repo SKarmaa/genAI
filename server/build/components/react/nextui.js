@@ -1,5 +1,26 @@
 const fs = require(`fs`);
+
 /*
+`./build/gits/nextui-org$nextui/apps/docs/content/docs/components` for title+desc+imports+usage+examples
+
+^ point to code demos like this :
+    <CodeDemo title="Usage" files={accordionContent.usage} />
+    <CodeDemo title="With subtitle" files={accordionContent.subtitle} />
+  or
+    <ImportTabs
+      commands={{
+        main: 'import {Accordion, AccordionItem} from "@nextui-org/react";',
+        individual: 'import {Accordion, AccordionItem} from "@nextui-org/accordion";',
+      }}
+    />
+
+^ which are found under :
+
+`./build/gits/nextui-org$nextui/apps/docs/content/components/` for code demos (?)
+
+adapt imports individual/main in relation to whether using next or react (or svelte, via react:ComponentName prefix)
+*/
+
 function _replaceLastOccurrence(inputString, search, replacement) {
   const lastIndex = inputString.lastIndexOf(search);
 
@@ -16,7 +37,7 @@ function _replaceLastOccurrence(inputString, search, replacement) {
 
   return replacedString;
 }
-*/
+
 async function build() {
   console.dir({ "build/components": `react/nextui` });
   const docs_files = fs
